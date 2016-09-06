@@ -259,11 +259,11 @@ class CartItem implements Arrayable
         if($attribute === 'priceTax') {
             return $this->price + $this->tax;
         }
-        
+
         if($attribute === 'subtotal') {
             return $this->qty * $this->price;
         }
-        
+
         if($attribute === 'total') {
             return $this->qty * ($this->priceTax);
         }
@@ -271,7 +271,7 @@ class CartItem implements Arrayable
         if($attribute === 'tax') {
             return $this->price * ($this->taxRate / 100);
         }
-        
+
         if($attribute === 'taxTotal') {
             return $this->tax * $this->qty;
         }
